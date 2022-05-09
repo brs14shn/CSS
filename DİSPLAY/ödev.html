@@ -2,57 +2,69 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 </head>
 
 <style>
-    h1 {
-        text-decoration: none;
-        padding: 1rem 1rem;
+    .mainmenubtn {
+        background-color: #333;
+        color: white;
+        border: none;
+        cursor: pointer;
+        padding: 1rem;
+        margin-top: 1.5rem;
+        font-size: 1rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .mainmenubtn:hover {
+        background-color: red;
+    }
+
+    .dropdown {
+        position: relative;
         display: inline-block;
-        background-color: rgb(100, 255, 210);
-        margin-bottom: -10px;
-        margin-left: 1rem;
-        width: 5em;
     }
 
-    ul>li {
-        border: 2px solid red;
-        width: 4em;
+    .dropdown-child {
         display: none;
+        background-color: white;
+        min-width: 10em;
+        border: 1px solid black;
     }
 
-    h1:hover p {
-        color: red;
+    .dropdown-child a {
+        color: black;
+        padding: 10px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-child ::before {
+        content: "📍";
+    }
+
+    .dropdown:hover .dropdown-child {
         display: block;
 
-
     }
 
-    p {
-        display: none;
-    }
+    */
 </style>
 
 <body>
-
-    <h1>ürünler</h1>
-    <ul>
-
-        <li><a href="">Notebook</a></li>
-        <li><a href="">Klavye</a></li>
-        <li><a href="">Fare</a></li>
-        <li><a href="">Monitör</a></li>
-
-    </ul>
-
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis architecto vitae quam consequatur illum.
-        Voluptas repudiandae incidunt repellat nobis in!</p>
-
-
+    <div class="dropdown">
+        <button class="mainmenubtn">Ürünler</button>
+        <div class="dropdown-child">
+            <a href="http://wwww.alanadiniz.com/sayfa1.html">Notebook</a>
+            <a href="http://wwww.alanadiniz.com/sayfa2.html">Klavye</a>
+            <a href="http://wwww.alanadiniz.com/sayfa3.html">Fare</a>
+            <a href="http://wwww.alanadiniz.com/sayfa4.html">Monitör</a>
+        </div>
+    </div>
 </body>
 
 </html>
